@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header .nav {
+    width: 100%;
+    height: 4em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99;
+    background: transparent;
+    position: fixed;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #f8fbfb;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.nav .logo {
+    position: relative;
+    left: -2em;
+}
+
+.nav .logo i {
+    font-size: 2em;
+    color: #171313;
+}
+
+.nav .logo a {
+    font-size: 1.5em;
+}
+
+.nav .home a {
+    position: relative;
+    margin-left: 2em;
+}
+
+.home a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #6fe93b;
+    bottom: -6px;
+    transform: scale(0);
+    transition: .5s;
+}
+
+.home a:hover::after {
+    transform: scale(1);
+}
+
+.search a {
+    margin-left: 1em;
+}
+
+.search .login {
+    padding: 7px 15px;
+    background-color: rgb(197, 13, 13);
+    border-radius: 5%;
+}
+
+.search a:active {
+    font-size: 20px;
+}
+
+.banner {
+    background-image: url(https://i.imgur.com/vneWJBg.jpg);
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #339b89;
+    font-size: 24px;
+}
+
+.anh3d {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background: url(https://img.freepik.com/free-vector/blue-curve-frame-template_53876-114605.jpg?w=2000);
+    background-size: cover;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+
+.box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textrun {
+    margin-top: 20px;
+    color: #1f192f;
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    color: #ff6600;
+}
+
+.playlist {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex-basis: 30%;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-blue-background-line-display-bar-print-ad-image_150153.jpg);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fffeff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+li:before {
+    content: "\2022";
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+li:hover {
+    color: #ff6600;
+    cursor: pointer;
+    transform: scale(1.2);
+
+}
+
+footer {
+    background-image: url(https://khoinguonsangtao.vn/wp-content/uploads/2022/10/hinh-dep-cho-powerpoint-chuyen-nghiep-nhat.jpg);
+    padding: 20px;
+    margin-top: 15px;
+    color: aliceblue;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: #28f41d;
+    text-decoration: none;
+}
+
+.footer-section img {
+    max-width: 100%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    color: #281aa3;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    background-color: #efc9c9;
+}
+
+.pagination .prev,
+.pagination .next {
+    font-weight: bold;
+}
+
+.pagination .prev:hover,
+.pagination .next:hover,
+.pagination .page:hover {
+    background-color: #f09e9e;
+}
+
+.pagination .active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+/* Định dạng cho mục audio */
+
+audio {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* Tạo màu nền và viền cho mục audio */
+
+audio {
+    border: 1px solid rgb(193, 180, 241);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+
+/* Tạo màu chữ và kiểu chữ cho mục audio */
+
+audio {
+    border-radius: 10px #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+/* Tạo hiệu ứng hover cho mục audio */
+
+audio:hover {
+    background-color: #e44848;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+    background-color: #d166d1;
+}
+
+
+/* Tạo hiệu ứng active cho mục audio */
+
+audio:active {
+    background-color: #eed7a6;
+}
+
+
+/* Tạo màu cho nút điều khiển audio */
+
+audio::-webkit-media-controls-start-playback-button,
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+    background-color: #ee0c0c;
+    border-radius: 45px 45px 45px 45px;
+}
+
+
+/* Tạo màu cho thanh tiến độ audio */
+
+audio::-webkit-media-controls-progress-bar {
+    background-color: rgb(23, 206, 63);
+    color: #28f41d;
+}
+
+
+/* Tạo màu cho thanh tiến độ đã hoàn thành audio */
+
+audio::-webkit-media-controls-played-bar {
+    background-color: #1bd12a94;
+    color: #28f41d;
+}
+
